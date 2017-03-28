@@ -14,12 +14,8 @@ void myprint(char* s) {
 */
 import "C"
 
-func example() {
+func main() {
 	cs := C.CString("Hello from stdio\n")
 	C.myprint(cs)
 	C.free(unsafe.Pointer(cs))
-}
-
-func main() {
-	example()
 }
